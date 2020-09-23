@@ -112,7 +112,8 @@ padding: 0em 7em;
 }
 /*-- Heading-1 --*/
 .header-w3layouts {
-padding-top: 2em;
+padding-top: -40px;
+margin-top: -65px;
 position: absolute;
 width: 100%;
 z-index: 99;

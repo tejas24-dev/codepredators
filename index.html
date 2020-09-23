@@ -33,8 +33,76 @@
    <!--//stylesheets-->
    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
    <link href="//fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,500,600,700" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="shortcut icon" href="logo.ico">
+  
+   <style type="text/css">
+
+     
+     * { padding: 0; margin: 0; outline: none!important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+.vertical-nav,
+.vertical-nav-btn { -webkit-transition: all 0.4s; -o-transition: all 0.4s; transition: all 0.4s; }
+
+.vertical-nav-btn { width: 104px; height: 104px; background: #ff9947; border-radius: 50%; z-index: 8; font-size: 30px; line-height: 30px; display: block; position: absolute; top: 50%; left: 50%; margin-left: -42px; margin-top: -52px; color: #fff; text-align: center; padding: 37px 0 0 20px; -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.4); box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);}
+.vertical-nav-btn:hover { background: #eb8d41; color: #e36321 }
+
+.vertical-nav-btn.active:hover,
+.vertical-nav-btn.active { background: #fff; color: #484b4c;  -webkit-box-shadow: 0 0 0px 0 rgba(0,0,0,0); box-shadow: 0 0 0px 0 rgba(0,0,0,0); }
+
+.vertical-nav-holder { max-width: 414px; max-height: 414px; position: fixed; top: 65%; left: -160px; margin-top: -241px; z-index: 6;}
+
+.vertical-nav { overflow: hidden; border-radius: 50%; background: #ec9419; position: relative; width: 330px; height: 330px; margin: 2px; -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.4);
+box-shadow: 0 0 20px 0 rgba(0,0,0,0.4); z-index: 3;  transform: scale(0); }
+.vertical-nav.active { transform: scale(1); }
+
+.vertical-nav li {font-size: 1.3em; height: 10em; left: 50%; margin-left: -10em; overflow: hidden; position: absolute; top: -34px; transform-origin: 100% 100% 0; transition: border 0.3s ease 0s; width: 10em; }
+.vertical-nav li a {border-radius: 50%; bottom: -7.25em; color: #fff; display: block; font-size: 1.18em; height: 14.5em; padding-top: 1.8em; position: absolute; right: -7.25em; text-align: center; text-decoration: none; transform: skew(-50deg) rotate(-70deg) scale(1); transition: opacity 0.3s ease 0s, color 0.3s ease 0s; width: 14.5em; background-color: #ffa247; }
+.vertical-nav li .fa { font-size: 1.1em; opacity: 0.7; display: inline-block; }
+
+.vertical-nav li:first-child { transform: rotate(80deg) skew(50deg); }
+.vertical-nav li:nth-child(2) { transform: rotate(120deg) skew(50deg); }
+.vertical-nav li:nth-child(3) { transform: rotate(160deg) skew(50deg); }
+.vertical-nav li:nth-child(4) { transform: rotate(200deg) skew(50deg); }
+.vertical-nav li:nth-child(5) { transform: rotate(240deg) skew(50deg); }
+
+.vertical-nav li:nth-child(2n+1) a { background-color: #ff9947; }
+.vertical-nav li a:hover { background-color: #f48828; }
+
+.vertical-nav-overlay { background-color: rgba(0, 0, 0, 0.6); bottom: 0; height: 100%; left: 0; opacity: 0; position: fixed; right: 0; top: 0; transition: all 0.3s ease 0s; visibility: hidden; width: 100%; z-index: 2; }
+.vertical-nav-overlay.active { opacity: 1; visibility: visible; }
+.job1{
+background-color: #ff9947 !important;
+    border-color: #ff9947 !important;
+    }
+    .jobbtn{
+        padding: 25px 58px 31px 77px;
+    border-radius: 36px;
+    background-color: #1F2D5E!important;
+    font-size: 22px;
+    margin-left: 33%;
+    }
+
+
+      #loading {
+    position: fixed;
+    width:  100%;
+    height: 100vh;
+    background: #fff
+    url('https://static-steelkiwi-dev.s3.amazonaws.com/media/filer_public/2b/3b/2b3b2d3a-437b-4e0a-99cc-d837b5177baf/7d707b62-bb0c-4828-8376-59c624b2937b.gif')
+    no-repeat center;
+    z-index: 99999;
+    } 
+
+   </style>
 </head>
-<body>
+<body onload="myfunction()">
+
+
+ <div id="loading"></div>      
+   
    <div class="header-outs" id="header">
       <div class="header-w3layouts">
          <div class="container">
@@ -44,6 +112,37 @@
             </div>
             <!-- /open/close -->
             <!-- navigation section  -->
+
+            <div class="vertical-nav-holder">
+         <a href="#" class="vertical-nav-btn"><i class="fa fa-share-alt"></i></a>
+         <div class="vertical-nav ">
+            <ul>
+               <li>
+                  <a href="#"><i class="fa fa-envelope"></i></a>
+               </li>
+
+               <li>
+                  <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+               </li>
+
+               <li>
+                  <a href="#" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+               </li>
+
+               <li>
+                  <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+               </li>
+
+               <li>
+                  <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+               </li>
+            </ul>
+         </div><!-- /.vertical-nav -->
+      </div><!-- /.vertical-nav-holder -->
+      <div class="vertical-nav-overlay"></div><!-- /.vertical-nav-overlay -->
+      <!-- End Round Stick Social Icon -->
+      
+
             <div class="menu">
                <a href="" id="menuToggle"> <span class="navClosed"></span> </a>
                <nav>  
@@ -84,7 +183,7 @@
                         <div class="slider-info">
                            <h5>We are<br>Leading Buisness Tycoons</h5>
                            <p>Our Aim is to give best Services to Our Customers</p>
-                           <div class="outs_more-buttn">
+                           <div class="outs_more-buttn center">
                               <a href="#contact" class="scroll">Book Now</a>
                            </div>
                         </div>
@@ -118,30 +217,65 @@
    <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
          <div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-            <h3 class="title mb-2">What We Do</h3>
+            <h3 class="title mb-2" style="color: #FF3D00 ">Welcome TO CodePreadators</h3>
             <div class="line-w3ls-title text-center mb-md-4 mb-sm-3 mb-3"></div>
-            <p>We have lot of Experience in website designing and to provide backend support to our Customers .<br>We are also Product based Company,we are live soon with our product</p>
+            <p>We have lot of Experience in website designing and to provide backend support to our Customers.</p>
          </div>
          <div class="row">
             <div class="col-lg-5 col-md-6 left-imag-agile-txt">
                <img src="images/ab1.jpg" alt=" " class="img-fluid">
             </div>
             <div class="col-lg-7 col-md-6 right-abut-agile-txt">
-               <h2 class="pb-3"> Who We Are</h2>
-               <p>CODEPREDATORS Group is a global Information Technology Service Provider with a team of brilliant and dedicated Professionals 
+               <h2 class="pb-3" > What We do </h2>
+               <p>CODEPREDATORS  is a  Information Technology Service Provider with a team of brilliant and dedicated Professionals 
 			  served many clients across the nation and now we are also launching new products. 
-			  We ensure the highest level of certainty and satisfaction through a deep-set commitment. Our mission is to help customers, achieve their business objectives by providing innovative, best-in-class, IT solutions, and services to make it a joy for all Clients.
+			  We ensure the highest level of certainty and satisfaction through a deep-set commitment. Our mission is to help customers, achieve their business objectives by providing innovative, best-in-class, IT solutions, and services to make it a joy for all Clients.</p>
 
-.</p>
-               <div class="outs_about-buttn mt-lg-4 mt-md-3 mt-3">
-                  <a href="#contact" class="scroll">Book Now</a>
+
+
+              </div>
+              
+         </div>
+
+         <br>
+		<div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+          <h3 class="title mb-2" style="color: #FF3D00 ">About Us</h3>
+          <div class="line-w3ls-title text-center mb-md-4 mb-sm-3 mb-3"></div>
+            <p>We're driven by a passion to help as Codepredators enables customers to reimagine their digital future by applying a unique formula of integrated design and cognitive technology. We help them enhance productivity by ensuring vital business functions work faster, cheaper and better. Our ability to conceptualize, architect and implement new and expanded capabilities allows clients to transform legacy models to take their business to the next level.</p>
+         </div>
+         
+         <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+               <div class="sec-title text-center">
+                  <h2> Our Mission </h2>
+                  <div class="devider"><i class="fa fa-cubes fa-lg fa-3x"></i></div>
                </div>
+               <br>
+               <div class="sec-sub-title text-center">
+                  <p align="justify" style="font-weight: 300;">Be a specialized enterprise at the confluence of people.Powered by inquisitive minds.We leverage our talent and innovative blend of services and technology to deliver customer delight. </p>
+               </div>      
             </div>
-         </div><br>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+               <div class="sec-title text-center">
+                  <h2> Our Vision </h2>
+                  <div class="devider"><i class="fa fa-eye fa-lg fa-3x"></i></div>
+               </div>
+               <br>
+               <div class="sec-sub-title text-center">
+                  <p align="justify" style="font-weight: 300;">Trying to make a globally respected corporation that provides best-in-breed business solutions & leveraging technology, delivered by best-in-class people. </p>
+               </div>      
+            </div>
+         </div>
+      
+           </div>
 		
 		<div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+          <h3 class="title mb-2" style="color: #FF3D00 ">Why Codepredators</h3>
+          <p>We help them enhance productivity by ensuring vital business functions work faster, cheaper and better. Our ability to conceptualize, architect and implement new and expanded capabilities allows clients to transform legacy models to take their business to the next level.</p>
+         
+            </div>
+      <div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
 
-		<h3 class="title mb-2">Why Choose Us</h3>
          <div class="row mt-lg-5 mt-md-4 mt-sm-3 mt-3">
             <div class="col-lg-4 col-md-4 col-sm-12 about-agile-icon text-center">
                <img src="https://img.icons8.com/dusk/64/000000/light.png"/>
@@ -175,41 +309,14 @@
       </div>
    </section>
    <!-- //About-one -->
-   <!--states -->
-   <section class="stats py-lg-4 py-md-3 py-sm-3 py-3">
-      <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
-         <div class="jst-must-info text-center">
-            <div class="row stats-info">
-               <div class="col-md-4 col-sm-8 col-8 stats-grid-1">
-                  <div class=" stats-grid">
-                     <div class="counter">2</div>
-                     <div class="stat-info">
-                        <h5 class="pt-2">Experience </h5>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-8 col-8 stats-grid-2">
-                  <div class=" stats-grid">
-                     <div class="counter">5</div>
-                     <div class="stat-info">
-                        <h5 class="pt-2"> Projects</h5>
-                     </div>
-                  </div>
-               </div>
-                     
-            </div>
-         </div>
-      </div>
-   </section>
-   <!--//states -->
+   
    <!--service-->	
    <section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
       <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
          <div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-            <h3 class="title mb-2">Our Services</h3>
+            <h3 class="title mb-2">OUR SPECIALIZATION</h3>
             <div class="line-w3ls-title text-center mb-md-4 mb-sm-3 mb-3"></div>
-            <p>We Commit to give best services<br>to our customers.</p>
-         </div>
+           </div>
          <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6 ser-icon p-0">
                <div class="row mx-0">
@@ -294,8 +401,8 @@
       </div>
    </section>
    <!--//service-->
-   <!--team -->
-   <section class="clients py-lg-4 py-md-3 py-sm-3 py-3" id="team">
+   
+   <!--team --<section class="clients py-lg-4 py-md-3 py-sm-3 py-3" id="team">
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
          <div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
             <h3 class="title mb-2">Our Team</h3>
@@ -341,7 +448,7 @@
                         </div>
       </div>
    </section>
-   <!--//team -->
+   team -->
    <section class="fun-facts py-lg-4 py-md-3 py-sm-3 py-3">
       <div class="container-fluid py-lg-5 py-md-5 py-sm-4 py-3">
          <div class="fun-hedder-up text-cent">
@@ -355,36 +462,57 @@
   <section class="gallery py-lg-4 py-md-3 py-sm-3 py-3" Id="gallery">
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
          <div class="title-sub text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-            <h3 class="title mb-2">Our Products</h3>
+            <h3 class="title mb-2">Our Projects</h3>
             <div class="line-w3ls-title text-center mb-md-4 mb-sm-3 mb-3"></div>
-            <p>Below some of our projects ,click on the images that redirect you to our projects</p>
+      
          </div>                   
-                <div class="container-fluid  pt-5 pb-5" id="sympid">
-      <div class="container">
-          <div class="row">
-         <div class="col-lg-4 col-md-8 col-12 mt-5">
-             <figure class="text-center">  
-             <a href="http://jamaoldwest.com/SAFETY/" target="_blank"><img src="images/zama.jpeg" alt="/" width="325" height="175"></a>
-             </figure>
-         </div>
-         <div class="col-lg-4 col-md-8 col-12 mt-5">
-             <figure class="text-center">
-             <a href="https://sandhufurnitures.in/" target="_blank"><img src="images/sanlogo.jpeg" class="imgfluid bg-info" width="325" height="175"></a>
-             </figure>
-         </div>
+                
+            <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="images/zama.jpeg" alt="Jama" width="180px;" height="259px;">
+    <div class="card-body">
+      <h5 class="card-title">Jama Corporation</h5>
+      <p class="card-text">Jama Corporation Private Limted was established in 1996 as a contract manufacturer for Acme Boot Company in USA in 1994, JAMA established its own brand name in the USA 'OLD WEST', Old West is now a brand name well recognised in the western boot market world over.</p>
 
-         <div class="col-lg-4 col-md-8 col-12 mt-5">
-             <figure class="text-center">
-             <img src="images/project_3.png" class="imgfluid bg-info" width="325" height="175">
-              
-             </figure>
-         </div>
-      </div>
-         </div>
+    </div>
+    <div class="card-footer">
+           
+      <a href="http://jamaoldwest.com/SAFETY/index.html" class="btn btn-primary center">Know More</a>    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/sanlogo.jpeg" alt="Sandhu Furnitures" width="180px;" height="259px;">
+    <div class="card-body">
+      <h5 class="card-title">Sandhu Furnitures</h5>
+      <p class="card-text">In Sandhu Furnitures is our commitment to bring professionalism, good service and trust to the home repair service and making new one. We take immense pride in sending some of the most professional carpenter to your homes to fix things that aren't working or making new one.
 
+</p>
+    </div>
+    <div class="card-footer">
+     <a href="https://sandhufurnitures.in/index.php" class="btn btn-primary">Know More</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="images/product_!.jpg" alt="additional" width="180px;" height="259px;">
+    <div class="card-body">
+      <h5 class="card-title">Your Website</h5>
+      <p class="card-text">
+         Why You need a Website
+         <ol>
+            <li>Website Adds To Company’s Credibility</li>
+            <li>Expand Your Working Hours</li>
+            <li>Showcase Your Offers</li>
+            <li>Fading Social Media Reach</li>
+         </ol>
+      </p>
+    </div>
+    <div class="card-footer">
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</div>
                 </div>
-               </div>
-
+</section>
 
    <!--//Gallery-->
    <!-- clients -->
@@ -601,49 +729,76 @@
    <!-- //light box js-->   
    <!--responsiveslides banner-->
    <script src="js/responsiveslides.min.js"></script>
-   <script>
-      // You can also use "$(window).load(function() {"
-      $(function () {
-      	// Slideshow 4
-      	$("#slider4").responsiveSlides({
-      		auto: true,
-      		pager:false,
-      		nav:true ,
-      		speed: 900,
-      		namespace: "callbacks",
-      		before: function () {
-      			$('.events').append("<li>before event fired.</li>");
-      		},
-      		after: function () {
-      			$('.events').append("<li>after event fired.</li>");
-      		}
-      	});
+   <script type="text/javascript">
+      var preloader =document.getElementById('loading');
+
+      function myfunction(){
+         preloader.style.display = 'none';
+
+
+            $(function () {
+         // Slideshow 4
+         $("#slider4").responsiveSlides({
+            auto: true,
+            pager:false,
+            nav:true ,
+            speed: 900,
+            namespace: "callbacks",
+            before: function () {
+               $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+               $('.events').append("<li>after event fired.</li>");
+            }
+         });
       
       });
+   
+      }
    </script>
-   <!--// responsiveslides banner-->		
-   <!--navbar-->
+   <script type="text/javascript">
+      $(function(){
+    $('.vertical-nav-btn').click(function(){
+        $(this).toggleClass('active');
+
+        $('.vertical-nav').toggleClass('active');
+
+        $('.vertical-nav-overlay').toggleClass('active');
+
+        return false;
+    })
+
+    $(document).mouseup(function (e){
+        var container = $(".vertical-nav-btn");
+
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            container.removeClass('active');
+            $('.vertical-nav-overlay').removeClass('active');
+            $('.vertical-nav').removeClass('active');
+        }
+    });
+});
+   </script>
    <script>
       (function($){
-      	// Menu Functions
-      	$(document).ready(function(){
-      	$('#menuToggle').click(function(e){
-      		var $parent = $(this).parent('.menu');
-      	  $parent.toggleClass("open");
-      	  var navState = $parent.hasClass('open') ? "hide" : "show";
-      	  $(this).attr("title", navState + " navigation");
-      			// Set the timeout to the animation length in the CSS.
-      			setTimeout(function(){
-      				console.log("timeout set");
-      				$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
-      			}, 200);
-      		e.preventDefault();
-      	});
+         // Menu Functions
+         $(document).ready(function(){
+         $('#menuToggle').click(function(e){
+            var $parent = $(this).parent('.menu');
+           $parent.toggleClass("open");
+           var navState = $parent.hasClass('open') ? "hide" : "show";
+           $(this).attr("title", navState + " navigation");
+               // Set the timeout to the animation length in the CSS.
+               setTimeout(function(){
+                  console.log("timeout set");
+                  $('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+               }, 200);
+            e.preventDefault();
+         });
         });
       })(jQuery);
    </script>
-   <!--About OnScroll-Number-Increase-JavaScript -->
-   <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
    <script src="js/jquery.countup.js"></script>
    <script>
       $('.counter').countUp();
@@ -652,14 +807,18 @@
    <!-- start-smoth-scrolling -->
    <script src="js/move-top.js"></script>
    <script src="js/easing.js"></script>
-   <script>
+   
+   <!-- //here ends scrolling icon -->
+   <!--bootstrap working-->
+   <script src="js/bootstrap.min.js"></script>
+    <script>
       jQuery(document).ready(function ($) {
-      	$(".scroll").click(function (event) {
-      		event.preventDefault();
-      		$('html,body').animate({
-      			scrollTop: $(this.hash).offset().top
-      		}, 900);
-      	});
+         $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+               scrollTop: $(this.hash).offset().top
+            }, 900);
+         });
       });
    </script>
    <!-- start-smoth-scrolling -->
@@ -667,23 +826,22 @@
    <script>
       $(document).ready(function () {
       
-      	var defaults = {
-      		containerID: 'toTop', // fading element id
-      		containerHoverID: 'toTopHover', // fading element hover id
-      		scrollSpeed: 1200,
-      		easingType: 'linear'
-      	};
+         var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+         };
       
       
-      	$().UItoTop({
-      		easingType: 'easeOutQuart'
-      	});
+         $().UItoTop({
+            easingType: 'easeOutQuart'
+         });
       
       });
    </script>
-   <!-- //here ends scrolling icon -->
-   <!--bootstrap working-->
-   <script src="js/bootstrap.min.js"></script>
+  
    <!-- //bootstrap working-->
 </body>
 </html>
+
